@@ -36,7 +36,6 @@ const getAllToDos = (req,res) => {
 }
 
 const getTodo = (req,res) => {
-    console.log(req.params.id);
     const id = req.params.id;
 
     ToDo.findById(id)
