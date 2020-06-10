@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+var passport = require('passport');
+const users = require('./models/User/userRoutes');
 
 require('dotenv').config();
 const app = express();
@@ -12,6 +14,11 @@ app.use(bodyParser.urlencoded({
     extended: false
 }))
 
+//  passport middleware
+app.use(passport.initialize());
+require('./config/passport')(passport);
+
+app.use('/users', users);
 //routes
 
 app.get('/', (req, res) => {
@@ -28,7 +35,7 @@ mongoose.connect('mongodb://'+ process.env.MONGO_HOST + ':' + process.env.MONGO_
         process.exit;
     })
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
     console.log(`server is running on port ${port}`);
