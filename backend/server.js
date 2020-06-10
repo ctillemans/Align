@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 var passport = require('passport');
 const users = require('./models/User/userRoutes');
+const todos = require('./models/Todo/toDoRoutes');
 
 require('dotenv').config();
 const app = express();
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({
 app.use(passport.initialize());
 require('./config/passport')(passport);
 
+app.use('/todos', todos);
 app.use('/users', users);
 //routes
 

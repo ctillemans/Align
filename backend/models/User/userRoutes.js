@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-const mongoose = require('mongoose');
 const validators = require('../../validation/validators');
 const keys = require('../../config/keys')
 const jwt = require('jsonwebtoken');
