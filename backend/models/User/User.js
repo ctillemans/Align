@@ -1,8 +1,12 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema();
+const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-    unsername:{
+    name:{
+        type: String,
+        required: true,
+    },
+    email:{
         type: String,
         unique: true,
         required: true,
@@ -10,10 +14,14 @@ const userSchema = new Schema({
     password:{
         type: String,
         required: true
+    },
+    date:{
+        type: Date,
+        default: Date.now()
     }
 });
 
-User = module.exports = mongoose.model("User", userSchema);
+User = module.exports = mongoose.model("users", userSchema);
 
 // section for user functionality
 //  TODO create user (for registration)
