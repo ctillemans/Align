@@ -23,9 +23,4 @@ const userSchema = new Schema({
 
 User = module.exports = mongoose.model("users", userSchema);
 
-// section for user functionality
-//  TODO create user (for registration)
-//  TODO login User 
-//  TODO Update User (not for MVP )
-//  TODO delete User 
 
