@@ -4,9 +4,9 @@
   "description": "Node js TODO CRUD app with mongodb and greensock animations",
   "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon server.js"
   },
   "keywords": [
     "nodejs",
