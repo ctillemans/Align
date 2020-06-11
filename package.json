@@ -1,0 +1,21 @@
+{
+  "name": "align",
+  "version": "1.0.0",
+  "description": "Todo with purpose ",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start:backend & npm run start:client",
+    "start:backend": "npm run server --prefix backend",
+    "start:client": "npm run start --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctillemans/Align.git"
+  },
+  "author": "Cassidy Tillemans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ctillemans/Align/issues"
+  },
+  "homepage": "https://github.com/ctillemans/Align#readme"
+}
