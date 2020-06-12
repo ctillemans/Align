@@ -24,7 +24,7 @@ function Register(){
         } 
 
     return (
-        <div className="container">
+        <div className="container"style={{paddingTop:"20px"}}>
             <div className="row">
                 <div className="col s8 offset-s2">
                     <Link to="/">
